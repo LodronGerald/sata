@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="de-AT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ .Site.Title }}</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #111820;
+            color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+                
+        .site-header {
+            background: #080808;
+            padding: 16px 24px;
+            border-bottom: 3px solid #d62828;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .site-logo {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+        }
+
+        .site-header h1 {
+            margin: 0;
+            color: #ffffff;
+            font-size: 2rem;
+            letter-spacing: 3px;
+        }
+
+        .site-header p {
+            margin: 4px 0 0;
+            color: #cccccc;
+        }
+
+
+        main {
+            max-width: 850px;
+            margin: 60px auto;
+            padding: 0 24px;
+        }
+
+
+        .site-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+        }
+
+        .main-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 22px;
+        }
+
+        .main-nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+
+        .main-nav a:hover {
+            color: #ff4545;
+        }
+
+        @media (max-width: 600px) {
+            .site-header {
+                justify-content: center;
+            }
+
+            .main-nav {
+                justify-content: center;
+                gap: 14px;
+            }
+        }
+
+
+        h2 {
+            color: #e5a52b;
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px;
+            color: #aaa;
+        }
+
+        .hero-button {
+            display: inline-block;
+            background: #d62828;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 24px;
+            font-weight: bold;
+            border-radius: 4px;
+            border: 1px solid #ff4545;
+            transition: background 0.2s;
+        }
+
+        .hero-button:visited,
+        .hero-button:active {
+            color: #ffffff;
+        }
+
+        .hero-button:hover {
+            background: #a91f1f;
+            color: #ffffff;
+        }
+
+        .brand {
+            gap: 16px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-text strong {
+            font-size: 1.8rem;
+            letter-spacing: 3px;
+        }
+
+        .brand-text span {
+            color: #cccccc;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .brand-text span {
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <header class="site-header">
+        <a href="/" class="brand">
+            <img src="/images/logo.jpg"
+                alt="SATA – Sauna Aufguss Team Austria"
+                class="site-logo">
+
+            <span class="brand-text">
+                <strong>SATA</strong>
+                <span>Sauna Aufguss Team Austria</span>
+            </span>
+        </a>
+
+        <nav class="main-nav">
+            <a href="#ueber-uns">Über uns</a>
+            <a href="#termine">Termine</a>
+            <a href="#mitglieder">Mitglieder</a>
+            <a href="#sponsoren">Sponsoren</a>
+        </nav>
+    </header>
+
+
+
+    <main>
+        <section class="hero">
+            <p class="hero-label">SAUNA AUFGUSS TEAM AUSTRIA</p>
+
+            <h2>Leidenschaft.<br>
+                Teamgeist.<br>
+                Sauna.</h2>
+
+            <p class="hero-text">
+                Wir stehen für die Kunst des Saunaaufgusses,
+                kreative Erlebnisse und echte österreichische Saunakultur.
+            </p>
+
+            <a href="#ueber-uns" class="hero-button">Lerne SATA kennen</a>
+        </section>
+
+        <section id="ueber-uns" class="intro">
+            {{ .Content }}
+        </section>
+    </main>
+
+    <footer>
+        &copy; {{ now.Year }} SATA – Sauna Aufguss Team Austria
+    </footer>
+</body>
+</html>
