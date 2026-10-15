@@ -9,7 +9,7 @@ und die Begeisterung für gemeinsame Erlebnisse verbindet.
 
 ## Bernd
 
-![Bernd – Vorstand von SATA](/images/bernd.jpg)
+![Bernd – Vorstand von SATA](../images/bernd.jpg)
 
 **Vorstand**
 
@@ -19,7 +19,7 @@ umzusetzen und SATA weiterzuentwickeln.
 
 ## Gerald
 
-![Gerald – Mitglied des SATA-Teams](/images/gerald.jpg)
+![Gerald – Mitglied des SATA-Teams](../images/gerald.jpg)
 
 **Teammitglied**
 

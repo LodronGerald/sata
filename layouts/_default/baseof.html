@@ -103,7 +103,8 @@
                     rgba(0, 0, 0, 0.88),
                     rgba(0, 0, 0, 0.25)
                 ),
-                url("/images/bernd.jpg") center/cover no-repeat;
+                
+                url('{{ "images/bernd.jpg" | relURL }}') center/cover no-repeat;
             border-bottom: 3px solid #d62828;
             border-radius: 6px;
         }
@@ -196,8 +197,8 @@
 
 <body>
     <header class="site-header">
-        <a href="/" class="brand">
-            <img src="/images/logo.jpg"
+        <a href='{{ "" | relURL }}' class="brand">
+            <img src='{{ "images/logo.jpg" | relURL }}'
                  alt="SATA – Sauna Aufguss Team Austria"
                  class="site-logo">
 
@@ -208,11 +209,11 @@
         </a>
 
         <nav class="main-nav">
-            <a href="/">Startseite</a>
-            <a href="/termine/">Termine</a>
-            <a href="/mitglieder/">Mitglieder</a>
-            <a href="/sponsoren/">Sponsoren</a>
-            <a href="/kontakt/">Kontakt</a>
+            <a href="{{ "" | relURL }}">Startseite</a>
+            <a href='{{ "termine/" | relURL }}'>Termine</a>
+            <a href="{{ "mitglieder/" | relURL }}">Mitglieder</a>
+            <a href="{{ "sponsoren/" | relURL }}">Sponsoren</a>
+            <a href="{{ "kontakt/" | relURL }}">Kontakt</a>
         </nav>
     </header>
 
